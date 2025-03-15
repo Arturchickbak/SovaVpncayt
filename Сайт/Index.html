@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Load OpenVPN Config</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #0d0d0d;
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+        .logo {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            color: #f8f8f8;
+        }
+        img {
+            width: 100%;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .step {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .device-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .device-buttons button {
+            padding: 12px 25px;
+            border: none;
+            cursor: pointer;
+            background: #1a73e8;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+        .device-buttons button:hover {
+            background: #0048a1;
+        }
+        .step-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+    </style>
+    <script>
+        function showGuide(device) {
+            document.getElementById('ios-guide').style.display = device === 'ios' ? 'block' : 'none';
+            document.getElementById('android-guide').style.display = device === 'android' ? 'block' : 'none';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img src="sovavasha (2).jpg" alt="Logo" class="logo">
+        <h1>How to Load OpenVPN Config</h1>
+        <p>Select your device:</p>
+        <div class="device-buttons">
+            <button onclick="showGuide('ios')">iOS</button>
+            <button onclick="showGuide('android')">Android</button>
+            <button onclick="showGuide('Windows')">Windows</button>
+        </div>
+        
+        <div id="ios-guide">
+            <h2>Как загрузить конфигурацию OpenVPN на iPhone</h2>
+            <div class="step-container">
+                <h2>Step 1: Download OpenVPN Connect</h2>
+                <p>Go to the App Store and search for "OpenVPN Connect." Install the app on your device.</p>
+                <img src="openvpn-appstore.png" alt="OpenVPN Connect on App Store">
+            </div>
+            <div class="step-container">
+                <h2>Step 2: Obtain Configuration Files</h2>
+                <p>Download the OpenVPN config file (.ovpn) from your provider.</p>
+            </div>
+            <div class="step-container">
+                <h2>Step 3: Import the Configuration</h2>
+                <p>Open the OpenVPN Connect app and import the .ovpn file using the "Import" option.</p>
+                <img src="openvpn-import.png" alt="Import Config in OpenVPN">
+            </div>
+            <div class="step-container">
+                <h2>Step 4: Connect to VPN</h2>
+                <p>After importing, tap on "Connect" and allow permissions. Your VPN should now be active.</p>
+                <img src="openvpn-connect.png" alt="Connect to VPN">
+            </div>
+        </div>
+        
+        <div id="android-guide" style="display: none;">
+            <h2>How to Load OpenVPN Config on Android</h2>
+            <div class="step-container">
+                <h2>Step 1: Download OpenVPN Connect</h2>
+                <p>Go to the Google Play Store and search for "OpenVPN Connect." Install the app on your device.</p>
+                <img src="openvpn-playstore.png" alt="OpenVPN Connect on Play Store">
+            </div>
+            <div class="step-container">
+                <h2>Step 2: Obtain Configuration Files</h2>
+                <p>Download the OpenVPN config file (.ovpn) from your provider.</p>
+            </div>
+            <div class="step-container">
+                <h2>Step 3: Import the Configuration</h2>
+                <p>Open the OpenVPN Connect app and import the .ovpn file using the "Import" option.</p>
+                <img src="openvpn-import-android.png" alt="Import Config in OpenVPN">
+            </div>
+            <div class="step-container">
+                <h2>Step 4: Connect to VPN</h2>
+                <p>After importing, tap on "Connect" and allow permissions. Your VPN should now be active.</p>
+                <img src="openvpn-connect-android.png" alt="Connect to VPN">
+            </div>
+        </div>
+        <div id="Windows" style="display: none;">
+            <h2>How to Load OpenVPN Config on Android</h2>
+            <div class="step-container">
+                <h2>Step 1: Download OpenVPN Connect</h2>
+                <p>Go to the Google Play Store and search for "OpenVPN Connect." Install the app on your device.</p>
+                <img src="openvpn-playstore.png" alt="OpenVPN Connect on Play Store">
+            </div>
+            <div class="step-container">
+                <h2>Step 2: Obtain Configuration Files</h2>
+                <p>Download the OpenVPN config file (.ovpn) from your provider.</p>
+            </div>
+            <div class="step-container">
+                <h2>Step 3: Import the Configuration</h2>
+                <p>Open the OpenVPN Connect app and import the .ovpn file using the "Import" option.</p>
+                <img src="openvpn-import-android.png" alt="Import Config in OpenVPN">
+            </div>
+            <div class="step-container">
+                <h2>Step 4: Connect to VPN</h2>
+                <p>After importing, tap on "Connect" and allow permissions. Your VPN should now be active.</p>
+                <img src="openvpn-connect-android.png" alt="Connect to VPN">
+            </div>
+    </div>
+</body>
+</html>
